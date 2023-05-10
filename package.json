@@ -1,0 +1,32 @@
+{
+  "name": "vtracer-webapp",
+  "collaborators": [
+    "Chris Tsang <tyt2y7@gmail.com>"
+  ],
+  "description": "A web app to convert images into vector graphics.",
+  "version": "0.4.0",
+  "license": "MIT OR Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/visioncortex/vtracer/"
+  },
+  "files": [
+    "vtracer_webapp_bg.wasm",
+    "vtracer_webapp.js",
+    "vtracer_webapp_bg.js",
+    "vtracer_webapp.d.ts",
+    "LICENSE-APACHE",
+    "LICENSE-MIT"
+  ],
+  "module": "vtracer_webapp.js",
+  "homepage": "http://www.visioncortex.org/vtracer",
+  "types": "vtracer_webapp.d.ts",
+  "sideEffects": [
+    "./vtracer_webapp.js",
+    "./snippets/*"
+  ],
+  "keywords": [
+    "svg",
+    "computer-graphics"
+  ]
+}
