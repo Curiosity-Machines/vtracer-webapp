@@ -3,26 +3,39 @@
   "collaborators": [
     "Chris Tsang <tyt2y7@gmail.com>"
   ],
+  "type": "module",
   "description": "A web app to convert images into vector graphics.",
+  "scripts": {
+    "build": "NODE_ENV=production node esbuild.config.js --define:process.env.NODE_ENV=\\\"production\\\""
+  },
   "version": "0.4.0",
+  "index": "dist/index.js",
   "license": "MIT OR Apache-2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/visioncortex/vtracer/"
   },
   "files": [
-    "vtracer_webapp_bg.wasm",
-    "vtracer_webapp.js",
-    "vtracer_webapp_bg.js",
-    "vtracer_webapp.d.ts",
-    "LICENSE-APACHE",
-    "LICENSE-MIT"
+    "dist/index.js"
   ],
-  "module": "vtracer_webapp.js",
+  "devDependencies": {
+    "esbuild": "^0.17.18",
+    "esbuild-plugin-wasm": "^1.1.0",
+    "esbuild-serve": "^1.0.1",
+    "eslint": "^8.40.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.2"
+  },
+  "module": "dist/index.js",
   "homepage": "http://www.visioncortex.org/vtracer",
   "types": "vtracer_webapp.d.ts",
   "sideEffects": [
-    "./vtracer_webapp.js",
+    "dist/index.js",
+    "dist/index.js.map",
+    "dist/vtracer_webapp_bg-IJ3Z5WDL.wasm",
     "./snippets/*"
   ],
   "keywords": [
